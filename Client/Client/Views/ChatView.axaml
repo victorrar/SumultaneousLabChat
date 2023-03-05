@@ -1,0 +1,68 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:Client.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Client.Views.ChatView">
+    <Design.DataContext>
+        <viewModels:ChatViewModel />
+    </Design.DataContext>
+
+    <Grid RowDefinitions="* Auto"
+          Margin="10">
+
+        <Grid>
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Auto">
+                <ItemsControl Items="{Binding Messages}"
+                              Background="Transparent">
+
+                    <ItemsControl.ItemTemplate>
+
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
+                                <Border Grid.Row="0" Grid.Column="0" Padding="10">
+                                    <TextBlock Text="{Binding Login}"
+                                               TextWrapping="WrapWithOverflow" Foreground="{Binding Color}" />
+                                </Border>
+                                <Border Grid.Row="0" Grid.Column="1" Padding="10">
+                                    <TextBlock Text="{Binding Text}"
+                                               TextWrapping="WrapWithOverflow" />
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+        </Grid>
+
+        <Grid Grid.Row="1"
+              ColumnDefinitions="* Auto,Auto"
+              Margin="0 10 0 0">
+
+            <TextBox TextWrapping="Wrap"
+                    HorizontalAlignment="Stretch"
+                     AcceptsTab="True"
+                     Text="{Binding MessageText}"
+                     Watermark="Enter text" />
+            <ComboBox Grid.Column="1" Items="{Binding UserList}" SelectedItem="{Binding SelectedMessage}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Login}" Foreground="{Binding Color}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Grid.Column="2"
+                    VerticalAlignment="Stretch"
+                    VerticalContentAlignment="Center"
+                    IsDefault="True"
+                    Margin="10 0 0 0"
+                    Command="{Binding SendCommand}"
+                    Content="Send" />
+        </Grid>
+
+    </Grid>
+</UserControl>

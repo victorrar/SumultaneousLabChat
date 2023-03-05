@@ -1,0 +1,12 @@
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\bin\Debug\net7.0\Protocol.deps.json
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\bin\Debug\net7.0\Protocol.dll
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\bin\Debug\net7.0\Protocol.pdb
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\obj\Debug\net7.0\Protocol.csproj.AssemblyReference.cache
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\obj\Debug\net7.0\Protocol.GeneratedMSBuildEditorConfig.editorconfig
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\obj\Debug\net7.0\Protocol.AssemblyInfoInputs.cache
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\obj\Debug\net7.0\Protocol.AssemblyInfo.cs
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\obj\Debug\net7.0\Protocol.csproj.CoreCompileInputs.cache
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\obj\Debug\net7.0\Protocol.dll
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\obj\Debug\net7.0\refint\Protocol.dll
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\obj\Debug\net7.0\Protocol.pdb
+U:\Victor\RiderProjects\SumultaneousLabChat\Protocol\obj\Debug\net7.0\ref\Protocol.dll

@@ -1,0 +1,47 @@
+﻿syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "Protocol";
+
+package chat;
+
+service Chat{
+
+  rpc CheckLogin (LoginRequest) returns (LoginResponse);
+  rpc JoinChat (LoginRequest) returns (stream ChatMessageDownstream);
+  rpc Send(ChatMessageUpstream) returns (google.protobuf.Empty);
+}
+
+message LoginRequest{
+  string login = 1;
+}
+message LoginResponse{
+  bool free = 1;
+}
+
+message ChatResponse{
+  bool free = 1;
+}
+
+message MessageText{
+  string text = 1;
+  string login = 2;
+  bool isPrivate = 3;
+}
+
+
+message MessageUserList{
+  repeated string login = 2;
+}
+
+message ChatMessageUpstream{
+  string login = 2;
+  MessageText text = 1;
+}
+
+message ChatMessageDownstream{
+  oneof message{
+    MessageText text = 1;
+    MessageUserList userList = 2;
+  }
+}
